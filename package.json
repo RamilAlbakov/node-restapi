@@ -1,0 +1,32 @@
+{
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server",
+    "devstart": "nodemon ./bin/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamilAlbakov/node-restapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamilAlbakov/node-restapi/issues"
+  },
+  "homepage": "https://github.com/RamilAlbakov/node-restapi#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.20"
+  }
+}
