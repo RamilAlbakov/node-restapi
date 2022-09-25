@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 const getUsers = `
   SELECT
     u.id,
@@ -38,8 +40,6 @@ const addNewBooks = (newBooks) => {
     .map((newBook) => `(${newBook.id}, '${newBook.title}', '${newBook.author}')`)
     .join(', ');
 
-  console.log(values);
-
   return `INSERT INTO books (id, title, author) VALUES ${values};`;
 };
 
@@ -53,6 +53,16 @@ const addNewRelations = (userId, books) => {
 
 const removeUser = 'DELETE FROM users WHERE id = $1;';
 
+const updateUser = (diff, id) => {
+  const valuesToSet = _.keys(diff)
+    .map((key) => `${key} = '${diff[key]}'`)
+    .join(', ');
+
+  return `UPDATE users SET ${valuesToSet} WHERE id = ${id};`;
+};
+
+const removeRelations = 'DELETE FROM users_books WHERE user_id = $1;';
+
 export default {
   getUsers,
   getUserById,
@@ -62,4 +72,6 @@ export default {
   addNewBooks,
   addNewRelations,
   removeUser,
+  updateUser,
+  removeRelations,
 };

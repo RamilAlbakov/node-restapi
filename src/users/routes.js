@@ -10,4 +10,6 @@ router.post('/', controller.addUser);
 
 router.delete('/:id', controller.removeUser);
 
+router.put('/:id', controller.updateUser);
+
 export default router;
