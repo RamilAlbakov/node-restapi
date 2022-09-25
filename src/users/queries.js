@@ -51,6 +51,8 @@ const addNewRelations = (userId, books) => {
   return `INSERT INTO users_books (user_id, book_id) VALUES ${values};`;
 };
 
+const removeUser = 'DELETE FROM users WHERE id = $1;';
+
 export default {
   getUsers,
   getUserById,
@@ -59,4 +61,5 @@ export default {
   addNewUser,
   addNewBooks,
   addNewRelations,
+  removeUser,
 };

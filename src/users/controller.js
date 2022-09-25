@@ -65,8 +65,16 @@ const addUser = (req, res) => {
   });
 };
 
+const removeUser = (req, res) => {
+  pool.query(queries.removeUser, [req.body.id], (error) => {
+    if (error) throw error;
+    res.status(200).send(`User ${req.body.firstname} ${req.body.lastname} was removed.`);
+  });
+};
+
 export default {
   getUsers,
   getUserById,
   addUser,
+  removeUser,
 };
