@@ -20,7 +20,7 @@ const parseUserAndBook = (selectedUser) => {
 
 const addBook = (user, book) => {
   if (_.keys(book).length !== 0) {
-    user.Books.push(book);
+    user.books.push(book);
   }
 };
 
@@ -34,7 +34,7 @@ const parseUsers = (selectedUsers) => {
     if (_.has(users, userId)) {
       addBook(users[userId], book);
     } else {
-      users[userId] = { ...user, Books: [] };
+      users[userId] = { ...user, books: [] };
       addBook(users[userId], book);
     }
   });
