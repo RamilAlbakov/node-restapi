@@ -4,9 +4,9 @@ This project presents REST API with Node, Express, PostgreSql.
 
 ## Settings
 
-1. Install Node, Express, PostgreeSql
+Install Node, Express, PostgreeSql
 
-2. Create database node_restapi and below tables inside:
+Create database node_restapi and below tables inside:
 
     CREATE TABLE users (
         id INT PRIMARY KEY,
@@ -33,13 +33,13 @@ This project presents REST API with Node, Express, PostgreSql.
         PRIMARY KEY(user_id, book_id)
     );
 
-3. Clone the current repository
+Clone the current repository
 
-4. Install all dependencies by command:
+Install all dependencies by command:
 
     Make install
 
-5. Create .env file in the root of project with username, passqord and port for your db.
+Create .env file in the root of project with username, passqord and port for your db.
 
 ## Usage
 
