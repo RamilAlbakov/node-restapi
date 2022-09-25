@@ -7,6 +7,7 @@ This project presents REST API with Node, Express, PostgreSql.
 1. Install Node, Express, PostgreeSql
 
 2. Create database node_restapi and below tables inside:
+
     CREATE TABLE users (
         id INT PRIMARY KEY,
         firstname VARCHAR(255),
